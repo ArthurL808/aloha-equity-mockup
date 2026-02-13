@@ -1,21 +1,26 @@
-import { Heart, Users, Shield } from "lucide-react";
+import { Clock, DollarSign, Home, Banknote } from "lucide-react";
 
 const AboutSection = () => {
-  const values = [
+  const features = [
     {
-      icon: Heart,
-      title: "Community First",
-      description: "We're rooted in Hawai'i. Our success is measured by the prosperity we bring to our local families and businesses.",
+      icon: Clock,
+      title: "We Work on Your Timeline",
+      description: "Need to close quickly? Want more time to plan your next move? We adjust to your schedule—whether that's days, weeks, or months.",
     },
     {
-      icon: Shield,
-      title: "Trust & Integrity",
-      description: "Transparency guides every decision. We build lasting relationships through honest communication and ethical practices.",
+      icon: DollarSign,
+      title: "No Fees. Ever.",
+      description: "When you sell to us, you pay zero out-of-pocket costs. No realtor commissions, no escrow fees, no closing costs. The offer we make is the amount you receive.",
     },
     {
-      icon: Users,
-      title: "Personal Touch",
-      description: "No generic solutions here. We take the time to understand your unique goals and craft strategies tailored to you.",
+      icon: Home,
+      title: "Sell As-Is",
+      description: "No repairs. No cleaning. No staging. We buy properties exactly as they are, in any condition.",
+    },
+    {
+      icon: Banknote,
+      title: "All-Cash Offers",
+      description: "Our all-cash offers eliminate financing delays and uncertainty, allowing for faster and more reliable closings.",
     },
   ];
 
@@ -23,39 +28,41 @@ const AboutSection = () => {
     <section id="about" className="py-24 bg-background">
       <div className="container mx-auto px-6">
         {/* Section Header */}
-        <div className="max-w-3xl mx-auto text-center mb-16">
+        <div className="max-w-3xl mx-auto text-center mb-6">
           <p className="text-accent font-medium tracking-wider uppercase text-sm mb-4">
-            About Legacy Equity Group
+            Why Homeowners Choose Us
           </p>
           <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl font-bold text-foreground mb-6">
-            Rooted in Aloha,
-            <br />
-            Driven by Excellence
+            How We Make Selling Easy
           </h2>
           <p className="text-lg text-muted-foreground leading-relaxed">
-            Legacy Equity Group LLC was founded with a simple mission: to help Hawai'i's families and businesses build lasting wealth. As a locally owned and operated firm, we understand the unique opportunities and challenges of investing in our island community.
+            Selling a property doesn't have to be complicated or overwhelming. At Legacy Equity Group, we specialize in creating a smooth, transparent, and stress-free selling experience—so you can move forward with confidence.
           </p>
         </div>
 
-        {/* Values Grid */}
-        <div className="grid md:grid-cols-3 gap-8">
-          {values.map((value, index) => (
+        <p className="text-center text-accent font-semibold text-lg mb-16">
+          We handle the details. You stay in control.
+        </p>
+
+        {/* Features Grid */}
+        <div className="grid md:grid-cols-2 gap-8">
+          {features.map((feature, index) => (
             <div
-              key={value.title}
+              key={feature.title}
               className="group relative bg-card rounded-2xl p-8 shadow-soft hover:shadow-elevated transition-all duration-500 border border-border/50"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               {/* Icon */}
               <div className="w-14 h-14 rounded-xl bg-gradient-sunset flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-                <value.icon className="w-7 h-7 text-accent" />
+                <feature.icon className="w-7 h-7 text-accent" />
               </div>
 
               {/* Content */}
               <h3 className="font-serif text-xl font-semibold text-foreground mb-3">
-                {value.title}
+                {feature.title}
               </h3>
               <p className="text-muted-foreground leading-relaxed">
-                {value.description}
+                {feature.description}
               </p>
 
               {/* Decorative Border */}
