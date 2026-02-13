@@ -18,7 +18,7 @@ const Header = () => {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <a href="#" className="flex items-center gap-3">
-            <img src={logo} alt="Legacy Equity Group LLC" className="h-14 w-auto" />
+            <img src={logo} alt="Legacy Equity Group LLC" className="h-14 w-14 object-contain rounded-lg" />
             <div className="hidden sm:block">
               <p className="font-serif font-semibold text-foreground text-lg leading-tight">Legacy Equity</p>
               <p className="text-xs text-muted-foreground tracking-wider">GROUP</p>

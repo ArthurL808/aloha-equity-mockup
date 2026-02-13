@@ -54,7 +54,7 @@
 
     /* Custom gradients */
     --gradient-hero: linear-gradient(135deg, hsl(150 40% 16%) 0%, hsl(150 35% 22%) 50%, hsl(130 40% 28%) 100%);
-    --gradient-gold: linear-gradient(135deg, hsl(120 50% 35%) 0%, hsl(140 45% 30%) 100%);
+    --gradient-gold: linear-gradient(135deg, hsl(85 60% 55%) 0%, hsl(120 45% 65%) 100%);
     --gradient-ocean: linear-gradient(180deg, hsl(150 40% 16% / 0.08) 0%, hsl(120 50% 35% / 0.04) 100%);
     --gradient-sunset: linear-gradient(135deg, hsl(120 50% 35% / 0.12) 0%, hsl(150 40% 30% / 0.08) 100%);
 
