@@ -1,4 +1,5 @@
 import { Phone, Mail } from "lucide-react";
+import logo from "@/assets/logo.png";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -9,9 +10,7 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row justify-between items-center gap-8">
           {/* Brand */}
           <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-lg bg-accent flex items-center justify-center">
-              <span className="text-accent-foreground font-serif font-bold text-lg">L</span>
-            </div>
+            <img src={logo} alt="Legacy Equity Group LLC" className="h-14 w-auto brightness-0 invert" />
             <div>
               <p className="font-serif font-semibold text-primary-foreground text-lg leading-tight">Legacy Equity</p>
               <p className="text-xs text-primary-foreground/70 tracking-wider">GROUP</p>

@@ -8,60 +8,60 @@
 
 @layer base {
   :root {
-    /* Ocean-inspired blues */
-    --background: 210 30% 98%;
-    --foreground: 215 35% 15%;
+    /* Forest green inspired palette */
+    --background: 120 15% 97%;
+    --foreground: 150 30% 12%;
 
-    /* Card surfaces - warm white */
-    --card: 40 30% 99%;
-    --card-foreground: 215 35% 15%;
+    /* Card surfaces */
+    --card: 120 10% 99%;
+    --card-foreground: 150 30% 12%;
 
-    --popover: 40 30% 99%;
-    --popover-foreground: 215 35% 15%;
+    --popover: 120 10% 99%;
+    --popover-foreground: 150 30% 12%;
 
-    /* Primary - Deep Ocean Navy */
-    --primary: 215 55% 20%;
-    --primary-foreground: 40 30% 98%;
+    /* Primary - Dark Forest Green */
+    --primary: 150 40% 16%;
+    --primary-foreground: 120 15% 97%;
 
-    /* Secondary - Sandy Warm */
-    --secondary: 35 25% 92%;
-    --secondary-foreground: 215 35% 20%;
+    /* Secondary - Light Sage */
+    --secondary: 120 15% 92%;
+    --secondary-foreground: 150 30% 18%;
 
-    /* Muted - Soft Sand */
-    --muted: 35 20% 94%;
-    --muted-foreground: 215 20% 45%;
+    /* Muted - Soft Green Gray */
+    --muted: 120 10% 93%;
+    --muted-foreground: 150 15% 42%;
 
-    /* Accent - Sunset Gold */
-    --accent: 38 85% 55%;
-    --accent-foreground: 215 35% 15%;
+    /* Accent - Vibrant Green */
+    --accent: 120 50% 35%;
+    --accent-foreground: 120 15% 97%;
 
     /* Tropical Teal */
-    --teal: 175 45% 40%;
-    --teal-foreground: 40 30% 98%;
+    --teal: 160 40% 35%;
+    --teal-foreground: 120 15% 97%;
 
     /* Ocean Blue */
-    --ocean: 200 70% 50%;
-    --ocean-foreground: 40 30% 98%;
+    --ocean: 170 50% 40%;
+    --ocean-foreground: 120 15% 97%;
 
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: 0 0% 98%;
 
-    --border: 35 20% 88%;
-    --input: 35 20% 88%;
-    --ring: 38 85% 55%;
+    --border: 120 12% 87%;
+    --input: 120 12% 87%;
+    --ring: 120 50% 35%;
 
     --radius: 0.5rem;
 
     /* Custom gradients */
-    --gradient-hero: linear-gradient(135deg, hsl(215 55% 20%) 0%, hsl(200 60% 30%) 50%, hsl(175 45% 35%) 100%);
-    --gradient-gold: linear-gradient(135deg, hsl(38 85% 55%) 0%, hsl(32 80% 50%) 100%);
-    --gradient-ocean: linear-gradient(180deg, hsl(200 70% 50% / 0.1) 0%, hsl(175 45% 40% / 0.05) 100%);
-    --gradient-sunset: linear-gradient(135deg, hsl(38 85% 55% / 0.15) 0%, hsl(25 80% 50% / 0.1) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(150 40% 16%) 0%, hsl(150 35% 22%) 50%, hsl(130 40% 28%) 100%);
+    --gradient-gold: linear-gradient(135deg, hsl(120 50% 35%) 0%, hsl(140 45% 30%) 100%);
+    --gradient-ocean: linear-gradient(180deg, hsl(150 40% 16% / 0.08) 0%, hsl(120 50% 35% / 0.04) 100%);
+    --gradient-sunset: linear-gradient(135deg, hsl(120 50% 35% / 0.12) 0%, hsl(150 40% 30% / 0.08) 100%);
 
     /* Shadows */
-    --shadow-soft: 0 4px 20px -4px hsl(215 35% 15% / 0.08);
-    --shadow-elevated: 0 12px 40px -8px hsl(215 35% 15% / 0.12);
-    --shadow-gold: 0 8px 30px -6px hsl(38 85% 55% / 0.35);
+    --shadow-soft: 0 4px 20px -4px hsl(150 30% 12% / 0.08);
+    --shadow-elevated: 0 12px 40px -8px hsl(150 30% 12% / 0.12);
+    --shadow-gold: 0 8px 30px -6px hsl(120 50% 35% / 0.3);
 
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;
@@ -74,33 +74,33 @@
   }
 
   .dark {
-    --background: 215 35% 10%;
-    --foreground: 40 30% 95%;
+    --background: 150 25% 8%;
+    --foreground: 120 15% 92%;
 
-    --card: 215 35% 12%;
-    --card-foreground: 40 30% 95%;
+    --card: 150 25% 11%;
+    --card-foreground: 120 15% 92%;
 
-    --popover: 215 35% 12%;
-    --popover-foreground: 40 30% 95%;
+    --popover: 150 25% 11%;
+    --popover-foreground: 120 15% 92%;
 
-    --primary: 38 85% 55%;
-    --primary-foreground: 215 35% 10%;
+    --primary: 120 50% 40%;
+    --primary-foreground: 150 25% 8%;
 
-    --secondary: 215 30% 18%;
-    --secondary-foreground: 40 30% 95%;
+    --secondary: 150 20% 16%;
+    --secondary-foreground: 120 15% 92%;
 
-    --muted: 215 30% 18%;
-    --muted-foreground: 215 20% 65%;
+    --muted: 150 20% 16%;
+    --muted-foreground: 150 15% 60%;
 
-    --accent: 38 85% 55%;
-    --accent-foreground: 215 35% 10%;
+    --accent: 120 50% 40%;
+    --accent-foreground: 150 25% 8%;
 
     --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: 0 0% 98%;
 
-    --border: 215 30% 20%;
-    --input: 215 30% 20%;
-    --ring: 38 85% 55%;
+    --border: 150 20% 18%;
+    --input: 150 20% 18%;
+    --ring: 120 50% 40%;
 
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
