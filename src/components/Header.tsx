@@ -6,9 +6,8 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const navLinks = [
-    { label: "About", href: "#about" },
-    { label: "Services", href: "#services" },
-    { label: "Why Legacy", href: "#why-legacy" },
+    { label: "How It Works", href: "#how-it-works" },
+    { label: "Why Us", href: "#why-legacy" },
     { label: "Contact", href: "#contact" },
   ];
 
@@ -23,7 +22,7 @@ const Header = () => {
             </div>
             <div className="hidden sm:block">
               <p className="font-serif font-semibold text-foreground text-lg leading-tight">Legacy Equity</p>
-              <p className="text-xs text-muted-foreground tracking-wider">GROUP LLC</p>
+              <p className="text-xs text-muted-foreground tracking-wider">GROUP</p>
             </div>
           </a>
 
@@ -42,8 +41,8 @@ const Header = () => {
 
           {/* CTA Button */}
           <div className="hidden md:block">
-            <Button variant="gold" size="default">
-              Schedule Consultation
+            <Button variant="gold" size="default" asChild>
+              <a href="#contact">Get Your Cash Offer</a>
             </Button>
           </div>
 
@@ -71,8 +70,8 @@ const Header = () => {
                   {link.label}
                 </a>
               ))}
-              <Button variant="gold" size="default" className="mt-2">
-                Schedule Consultation
+              <Button variant="gold" size="default" className="mt-2" asChild>
+                <a href="#contact">Get Your Cash Offer</a>
               </Button>
             </nav>
           </div>

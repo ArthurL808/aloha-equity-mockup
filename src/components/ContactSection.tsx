@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { MapPin, Phone, Mail, Clock } from "lucide-react";
+import { Phone, Mail, ArrowRight } from "lucide-react";
 import { useState } from "react";
 
 const ContactSection = () => {
@@ -9,37 +9,14 @@ const ContactSection = () => {
     name: "",
     email: "",
     phone: "",
+    propertyAddress: "",
     message: "",
   });
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission
     console.log("Form submitted:", formData);
   };
-
-  const contactInfo = [
-    {
-      icon: MapPin,
-      title: "Visit Us",
-      details: ["1234 Ala Moana Boulevard", "Suite 500", "Honolulu, HI 96814"],
-    },
-    {
-      icon: Phone,
-      title: "Call Us",
-      details: ["(808) 555-0123", "Toll Free: 1-800-555-0124"],
-    },
-    {
-      icon: Mail,
-      title: "Email Us",
-      details: ["info@legacyequitygroup.com", "support@legacyequitygroup.com"],
-    },
-    {
-      icon: Clock,
-      title: "Office Hours",
-      details: ["Monday - Friday: 8am - 5pm HST", "Weekends by appointment"],
-    },
-  ];
 
   return (
     <section id="contact" className="py-24 bg-background">
@@ -47,13 +24,13 @@ const ContactSection = () => {
         {/* Section Header */}
         <div className="max-w-3xl mx-auto text-center mb-16">
           <p className="text-accent font-medium tracking-wider uppercase text-sm mb-4">
-            Get In Touch
+            Get Started
           </p>
           <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl font-bold text-foreground mb-6">
-            Start Building Your Legacy Today
+            Get Your Cash Offer Today
           </h2>
           <p className="text-lg text-muted-foreground leading-relaxed">
-            Ready to take the next step? Schedule a complimentary consultation with our team. We'd love to hear about your goals.
+            There's no obligation and no pressure—just real answers. Fill out the form below or give us a call.
           </p>
         </div>
 
@@ -61,7 +38,7 @@ const ContactSection = () => {
           {/* Contact Form */}
           <div className="bg-card rounded-2xl p-8 shadow-soft border border-border/50">
             <h3 className="font-serif text-2xl font-semibold text-foreground mb-6">
-              Send Us a Message
+              Tell Us About Your Property
             </h3>
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid sm:grid-cols-2 gap-4">
@@ -78,35 +55,46 @@ const ContactSection = () => {
                 </div>
                 <div>
                   <label className="text-sm font-medium text-foreground mb-2 block">
-                    Email Address
+                    Phone Number
                   </label>
                   <Input
-                    type="email"
-                    placeholder="john@example.com"
-                    value={formData.email}
-                    onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                    type="tel"
+                    placeholder="(808) 555-0123"
+                    value={formData.phone}
+                    onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                     className="bg-background"
                   />
                 </div>
               </div>
               <div>
                 <label className="text-sm font-medium text-foreground mb-2 block">
-                  Phone Number
+                  Email Address
                 </label>
                 <Input
-                  type="tel"
-                  placeholder="(808) 555-0123"
-                  value={formData.phone}
-                  onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+                  type="email"
+                  placeholder="john@example.com"
+                  value={formData.email}
+                  onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                   className="bg-background"
                 />
               </div>
               <div>
                 <label className="text-sm font-medium text-foreground mb-2 block">
-                  How Can We Help?
+                  Property Address
+                </label>
+                <Input
+                  placeholder="123 Aloha St, Honolulu, HI"
+                  value={formData.propertyAddress}
+                  onChange={(e) => setFormData({ ...formData, propertyAddress: e.target.value })}
+                  className="bg-background"
+                />
+              </div>
+              <div>
+                <label className="text-sm font-medium text-foreground mb-2 block">
+                  Tell Us More (Optional)
                 </label>
                 <Textarea
-                  placeholder="Tell us about your financial goals..."
+                  placeholder="Any details about the property or your situation..."
                   rows={4}
                   value={formData.message}
                   onChange={(e) => setFormData({ ...formData, message: e.target.value })}
@@ -114,39 +102,56 @@ const ContactSection = () => {
                 />
               </div>
               <Button type="submit" variant="gold" size="lg" className="w-full">
-                Schedule Consultation
+                Get My Cash Offer
+                <ArrowRight className="w-5 h-5" />
               </Button>
             </form>
           </div>
 
-          {/* Contact Information */}
-          <div className="space-y-6">
-            {contactInfo.map((info) => (
-              <div
-                key={info.title}
-                className="flex items-start gap-4 p-6 bg-gradient-sunset rounded-xl"
-              >
+          {/* Contact Info & CTA */}
+          <div className="flex flex-col justify-center space-y-8">
+            <div>
+              <h3 className="font-serif text-2xl font-semibold text-foreground mb-4">
+                Prefer to Talk?
+              </h3>
+              <p className="text-muted-foreground leading-relaxed mb-8">
+                We're here to answer your questions. No pressure, no obligation—just a straightforward conversation about your options.
+              </p>
+            </div>
+
+            <div className="space-y-4">
+              <a href="tel:808-497-8919" className="flex items-center gap-4 p-6 bg-gradient-sunset rounded-xl hover:shadow-soft transition-all duration-300 group">
                 <div className="w-12 h-12 rounded-xl bg-accent/20 flex items-center justify-center flex-shrink-0">
-                  <info.icon className="w-6 h-6 text-accent" />
+                  <Phone className="w-6 h-6 text-accent" />
                 </div>
                 <div>
-                  <h4 className="font-semibold text-foreground mb-1">{info.title}</h4>
-                  {info.details.map((detail, index) => (
-                    <p key={index} className="text-muted-foreground text-sm">
-                      {detail}
-                    </p>
-                  ))}
+                  <h4 className="font-semibold text-foreground mb-1">Call Us</h4>
+                  <p className="text-muted-foreground text-sm">(808) 497-8919</p>
                 </div>
-              </div>
-            ))}
+              </a>
 
-            {/* Map Placeholder */}
-            <div className="bg-muted rounded-xl h-48 flex items-center justify-center border border-border/50">
-              <div className="text-center">
-                <MapPin className="w-8 h-8 text-muted-foreground mx-auto mb-2" />
-                <p className="text-muted-foreground text-sm">Interactive Map</p>
-                <p className="text-muted-foreground text-xs">Honolulu, Hawai'i</p>
-              </div>
+              <a href="mailto:LEG.LLC24@gmail.com" className="flex items-center gap-4 p-6 bg-gradient-sunset rounded-xl hover:shadow-soft transition-all duration-300 group">
+                <div className="w-12 h-12 rounded-xl bg-accent/20 flex items-center justify-center flex-shrink-0">
+                  <Mail className="w-6 h-6 text-accent" />
+                </div>
+                <div>
+                  <h4 className="font-semibold text-foreground mb-1">Email Us</h4>
+                  <p className="text-muted-foreground text-sm">LEG.LLC24@gmail.com</p>
+                  <p className="text-muted-foreground text-sm">info@legacyequitygroup.com</p>
+                </div>
+              </a>
+            </div>
+
+            <div className="bg-primary rounded-2xl p-8 text-center">
+              <p className="text-primary-foreground/80 text-sm mb-3">Ready to get started?</p>
+              <p className="font-serif text-2xl font-bold text-primary-foreground mb-4">
+                Talk to a Specialist
+              </p>
+              <Button variant="hero" size="lg" asChild>
+                <a href="tel:808-497-8919">
+                  Call (808) 497-8919
+                </a>
+              </Button>
             </div>
           </div>
         </div>
