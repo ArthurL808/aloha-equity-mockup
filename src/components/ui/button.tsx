@@ -17,7 +17,7 @@ const buttonVariants = cva(
         link: "text-primary underline-offset-4 hover:underline",
         // Custom variants for Legacy Equity
         hero: "bg-accent text-accent-foreground font-semibold shadow-gold hover:shadow-elevated hover:scale-105",
-        heroOutline: "border-2 border-primary-foreground/30 text-primary-foreground bg-transparent hover:bg-primary-foreground/10 hover:border-primary-foreground/50",
+        heroOutline: "border-2 border-primary-foreground/50 text-primary-foreground bg-transparent hover:bg-primary-foreground/10 hover:border-primary-foreground/70",
         gold: "bg-accent text-accent-foreground font-semibold hover:bg-accent/90 shadow-soft hover:shadow-elevated",
         ocean: "bg-primary text-primary-foreground font-semibold hover:bg-primary/90 shadow-soft",
       },

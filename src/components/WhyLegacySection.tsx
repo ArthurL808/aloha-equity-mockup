@@ -34,7 +34,7 @@ const WhyLegacySection = () => {
             <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl font-bold text-primary-foreground mb-6">
               We Buy Properties in Any Situation
             </h2>
-            <p className="text-lg text-primary-foreground/80 leading-relaxed mb-8">
+            <p className="text-lg text-primary-foreground/90 leading-relaxed mb-8">
               If you're unsure whether we're a fit, we're happy to talk. There's no obligation and no pressure—just real answers.
             </p>
 
@@ -44,7 +44,7 @@ const WhyLegacySection = () => {
                   <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-accent/20 flex items-center justify-center">
                     <item.icon className="w-5 h-5 text-accent" />
                   </div>
-                  <span className="text-primary-foreground/90">{item.label}</span>
+                  <span className="text-primary-foreground">{item.label}</span>
                 </li>
               ))}
             </ul>
@@ -58,7 +58,7 @@ const WhyLegacySection = () => {
             <h2 className="font-serif text-3xl sm:text-4xl font-bold text-primary-foreground mb-6">
               Why Legacy Equity Group
             </h2>
-            <p className="text-lg text-primary-foreground/80 leading-relaxed mb-8">
+            <p className="text-lg text-primary-foreground/90 leading-relaxed mb-8">
               We're not just buying properties—we're helping people move forward.
             </p>
 
@@ -68,7 +68,7 @@ const WhyLegacySection = () => {
                   <div className="flex-shrink-0 w-6 h-6 rounded-full bg-accent/20 flex items-center justify-center mt-0.5">
                     <Check className="w-4 h-4 text-accent" />
                   </div>
-                  <span className="text-primary-foreground/90 text-lg">{benefit}</span>
+                  <span className="text-primary-foreground text-lg">{benefit}</span>
                 </li>
               ))}
             </ul>

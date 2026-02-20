@@ -20,7 +20,7 @@ const HeroSection = () => {
       <div className="container relative z-10 mx-auto px-6 pt-32 pb-20">
         <div className="max-w-3xl">
           {/* Tagline */}
-          <p className="text-accent font-medium tracking-wider uppercase text-sm mb-6 animate-fade-up">
+          <p className="text-primary-foreground font-medium tracking-wider uppercase text-sm mb-6 animate-fade-up">
             Sell Your Property Simply. Confidently. On Your Terms.
           </p>
 
@@ -35,7 +35,7 @@ const HeroSection = () => {
             No Fees. No Repairs. No Stress.
           </p>
 
-          <p className="text-lg text-primary-foreground/70 max-w-xl mb-10 leading-relaxed animate-fade-up" style={{ animationDelay: "0.25s" }}>
+          <p className="text-lg text-primary-foreground/85 max-w-xl mb-10 leading-relaxed animate-fade-up" style={{ animationDelay: "0.25s" }}>
             We buy properties in Hawai'i — as-is, on your timeline, with zero out-of-pocket costs.
           </p>
 
@@ -55,15 +55,15 @@ const HeroSection = () => {
             <div className="grid grid-cols-3 gap-8">
               <div>
                 <p className="text-3xl sm:text-4xl font-serif font-bold text-primary-foreground">$0</p>
-                <p className="text-sm text-primary-foreground/70 mt-1">Fees or Commissions</p>
+                <p className="text-sm text-primary-foreground/80 mt-1">Fees or Commissions</p>
               </div>
               <div>
                 <p className="text-3xl sm:text-4xl font-serif font-bold text-primary-foreground">As-Is</p>
-                <p className="text-sm text-primary-foreground/70 mt-1">No Repairs Needed</p>
+                <p className="text-sm text-primary-foreground/80 mt-1">No Repairs Needed</p>
               </div>
               <div>
                 <p className="text-3xl sm:text-4xl font-serif font-bold text-primary-foreground">Cash</p>
-                <p className="text-sm text-primary-foreground/70 mt-1">Fast & Reliable Close</p>
+                <p className="text-sm text-primary-foreground/80 mt-1">Fast & Reliable Close</p>
               </div>
             </div>
           </div>

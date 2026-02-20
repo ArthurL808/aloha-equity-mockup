@@ -143,7 +143,7 @@ const ContactSection = () => {
             </div>
 
             <div className="bg-primary rounded-2xl p-8 text-center">
-              <p className="text-primary-foreground/80 text-sm mb-3">Ready to get started?</p>
+              <p className="text-primary-foreground/90 text-sm mb-3">Ready to get started?</p>
               <p className="font-serif text-2xl font-bold text-primary-foreground mb-4">
                 Talk to a Specialist
               </p>
