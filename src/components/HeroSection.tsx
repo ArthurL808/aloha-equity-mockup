@@ -41,12 +41,16 @@ const HeroSection = () => {
 
           {/* CTAs */}
           <div className="flex flex-col sm:flex-row gap-4 animate-fade-up" style={{ animationDelay: "0.3s" }}>
-            <Button variant="hero" size="xl">
-              Get Your Cash Offer
-              <ArrowRight className="w-5 h-5" />
+            <Button variant="hero" size="xl" asChild>
+              <a href="#contact">
+                Get Your Cash Offer
+                <ArrowRight className="w-5 h-5" />
+              </a>
             </Button>
-            <Button variant="heroOutline" size="xl">
-              Schedule a Free Consultation
+            <Button variant="heroOutline" size="xl" asChild>
+              <a href="tel:808-497-8919">
+                Schedule a Free Consultation
+              </a>
             </Button>
           </div>
 

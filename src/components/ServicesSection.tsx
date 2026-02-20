@@ -68,9 +68,11 @@ const ServicesSection = () => {
 
         {/* CTA */}
         <div className="text-center mt-12">
-          <Button variant="gold" size="xl">
-            Get Your Cash Offer
-            <ArrowRight className="w-5 h-5" />
+          <Button variant="gold" size="xl" asChild>
+            <a href="#contact">
+              Get Your Cash Offer
+              <ArrowRight className="w-5 h-5" />
+            </a>
           </Button>
         </div>
       </div>
