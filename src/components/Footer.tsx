@@ -10,7 +10,7 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row justify-between items-center gap-8">
           {/* Brand */}
           <div className="flex items-center gap-3">
-            <img src={logo} alt="Legacy Equity Group LLC" className="h-14 w-auto brightness-0 invert" />
+            <img src={logo} alt="Legacy Equity Group LLC" className="h-14 w-14 object-contain rounded-lg" />
             <div>
               <p className="font-serif font-semibold text-primary-foreground text-lg leading-tight">Legacy Equity</p>
               <p className="text-xs text-primary-foreground/70 tracking-wider">GROUP</p>
