@@ -21,8 +21,7 @@ const contactSchema = z.object({
 
 type ContactFormData = z.infer<typeof contactSchema>;
 
-// Replace with your Web3Forms access key from https://web3forms.com
-const WEB3FORMS_ACCESS_KEY = "YOUR_ACCESS_KEY_HERE";
+const WEB3FORMS_ACCESS_KEY = import.meta.env.VITE_WEB3FORMS_ACCESS_KEY;
 
 const ContactSection = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
