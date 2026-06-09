@@ -1,40 +1,42 @@
-import { Phone, Mail } from "lucide-react";
-import logo from "@/assets/logo.png";
+import logoTransparent from "@/assets/logo-transparent.png";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-primary text-primary-foreground">
-      <div className="container mx-auto px-6 py-12">
-        <div className="flex flex-col md:flex-row justify-between items-center gap-8">
-          {/* Brand */}
-          <div className="flex items-center gap-3">
-            <img src={logo} alt="Legacy Equity Group LLC" className="h-14 w-14 object-contain rounded-lg" />
-            <div>
-              <p className="font-serif font-semibold text-primary-foreground text-lg leading-tight">Legacy Equity</p>
-              <p className="text-xs text-primary-foreground/80 tracking-wider font-medium">GROUP</p>
+    <footer>
+      <div className="wrap">
+        <div className="fgrid">
+          <div className="fbrand">
+            <div className="fb-top">
+              <img src={logoTransparent} alt="Legacy Equity Group LLC" />
+              <span>
+                <b>Legacy Equity Group</b>
+                <span>Hawai'i · LLC</span>
+              </span>
             </div>
+            <p>Fair, all-cash offers for Hawai'i property owners. Sell simply, confidently, and on your terms.</p>
           </div>
 
-          {/* Contact Info */}
-          <div className="flex flex-col sm:flex-row items-center gap-6">
-            <a href="tel:808-497-8919" className="flex items-center gap-2 text-primary-foreground/90 hover:text-accent transition-colors text-sm">
-              <Phone className="w-4 h-4" />
-              (808) 497-8919
-            </a>
-            <a href="mailto:LEG.LLC24@gmail.com" className="flex items-center gap-2 text-primary-foreground/90 hover:text-accent transition-colors text-sm">
-              <Mail className="w-4 h-4" />
-              LEG.LLC24@gmail.com
-            </a>
+          <div className="fcol">
+            <h5>Explore</h5>
+            <a href="#process">How It Works</a>
+            <a href="#why">Why Us</a>
+            <a href="#situations">Who We Help</a>
+            <a href="#contact">Contact</a>
+          </div>
+
+          <div className="fcol">
+            <h5>Get in touch</h5>
+            <a href="tel:8084978919">(808) 497-8919</a>
+            <a href="mailto:info@legacyequitygroup.com">info@legacyequitygroup.com</a>
+            <span>All Hawaiian Islands</span>
           </div>
         </div>
 
-        {/* Bottom Bar */}
-        <div className="mt-8 pt-6 border-t border-primary-foreground/10 text-center">
-          <p className="text-primary-foreground/70 text-sm">
-            © {currentYear} Legacy Equity Group. All Rights Reserved.
-          </p>
+        <div className="fbar">
+          <p>&copy; {currentYear} Legacy Equity Group LLC. All rights reserved.</p>
+          <span className="ftag">What's your legacy?</span>
         </div>
       </div>
     </footer>

@@ -1,82 +1,93 @@
-import { useState } from "react";
-import { Button } from "@/components/ui/button";
-import { Menu, X } from "lucide-react";
-import logo from "@/assets/logo.png";
+import { useEffect, useState } from "react";
+import logoTransparent from "@/assets/logo-transparent.png";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
 
   const navLinks = [
-    { label: "How It Works", href: "#how-it-works" },
-    { label: "Why Us", href: "#why-legacy" },
+    { label: "How It Works", href: "#process" },
+    { label: "Why Us", href: "#why" },
+    { label: "Who We Help", href: "#situations" },
     { label: "Contact", href: "#contact" },
   ];
 
+  useEffect(() => {
+    const onScroll = () => setIsScrolled(window.scrollY > 40);
+    window.addEventListener("scroll", onScroll, { passive: true });
+    onScroll();
+
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border/50">
-      <div className="container mx-auto px-6">
-        <div className="flex items-center justify-between h-20">
-          {/* Logo */}
-          <a href="#" className="flex items-center gap-3">
-            <img src={logo} alt="Legacy Equity Group LLC" className="h-14 w-14 object-contain rounded-lg" />
-            <div className="hidden sm:block">
-              <p className="font-serif font-semibold text-foreground text-lg leading-tight">Legacy Equity</p>
-              <p className="text-xs text-muted-foreground tracking-wider">GROUP</p>
-            </div>
+    <>
+      <header id="hdr" className={`${isScrolled ? "scrolled" : "on-dark"}`}>
+        <div className="wrap nav">
+          <a href="#top" className="brand" aria-label="Legacy Equity Group home">
+            <img src={logoTransparent} alt="Legacy Equity Group LLC" />
+            <span className="bt">
+              <b>Legacy Equity Group</b>
+              <span>Hawai'i · LLC</span>
+            </span>
           </a>
 
-          {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center gap-8">
+          <nav className="menu">
             {navLinks.map((link) => (
-              <a
-                key={link.label}
-                href={link.href}
-                className="text-sm font-medium text-foreground hover:text-accent transition-colors duration-300"
-              >
+              <a key={link.label} className="link" href={link.href}>
                 {link.label}
               </a>
             ))}
           </nav>
 
-          {/* CTA Button */}
-          <div className="hidden md:block">
-            <Button variant="gold" size="default" asChild>
-              <a href="#contact">Get Your Cash Offer</a>
-            </Button>
+          <div className="nav-cta">
+            <a className="phone" href="tel:8084978919">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z" />
+              </svg>
+              (808) 497-8919
+            </a>
+            <a className="btn btn-leaf" href="#contact">
+              Get Your Cash Offer
+            </a>
           </div>
 
-          {/* Mobile Menu Button */}
-          <button
-            className="md:hidden p-2 text-foreground"
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-            aria-label="Toggle menu"
-          >
-            {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+          <button className="burger" onClick={() => setIsMenuOpen(true)} aria-label="Open menu">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
+              <path d="M3 6h18M3 12h18M3 18h18" />
+            </svg>
+          </button>
+        </div>
+      </header>
+
+      <div className={`drawer ${isMenuOpen ? "open" : ""}`} id="drawer">
+        <div className="dtop">
+          <b>Legacy Equity Group</b>
+          <button onClick={() => setIsMenuOpen(false)} aria-label="Close menu">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
+              <path d="M18 6 6 18M6 6l12 12" />
+            </svg>
           </button>
         </div>
 
-        {/* Mobile Navigation */}
-        {isMenuOpen && (
-          <div className="md:hidden py-4 border-t border-border animate-fade-in">
-            <nav className="flex flex-col gap-4">
-              {navLinks.map((link) => (
-                <a
-                  key={link.label}
-                  href={link.href}
-                  className="text-sm font-medium text-foreground hover:text-accent transition-colors py-2"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  {link.label}
-                </a>
-              ))}
-              <Button variant="gold" size="default" className="mt-2" asChild>
-                <a href="#contact">Get Your Cash Offer</a>
-              </Button>
-            </nav>
-          </div>
-        )}
+        <nav>
+          {navLinks.map((link) => (
+            <a key={link.label} href={link.href} onClick={() => setIsMenuOpen(false)}>
+              {link.label}
+            </a>
+          ))}
+        </nav>
+
+        <div className="dfoot">
+          <a className="btn btn-leaf" href="#contact" onClick={() => setIsMenuOpen(false)}>
+            Get Your Cash Offer
+          </a>
+          <a className="btn btn-ghost" href="tel:8084978919" onClick={() => setIsMenuOpen(false)}>
+            Call (808) 497-8919
+          </a>
+        </div>
       </div>
-    </header>
+    </>
   );
 };
 

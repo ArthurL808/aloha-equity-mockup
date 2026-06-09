@@ -1,79 +1,60 @@
-import { FileText, DollarSign, CalendarCheck, ArrowRight } from "lucide-react";
-import { Button } from "@/components/ui/button";
-
 const ServicesSection = () => {
-  const steps = [
-    {
-      icon: FileText,
-      number: "1",
-      title: "Tell Us About Your Property",
-      description: "Fill out our short form or give us a call. No obligations.",
-    },
-    {
-      icon: DollarSign,
-      number: "2",
-      title: "Receive Your Cash Offer",
-      description: "We'll review the details and present a fair, transparent cash offer.",
-    },
-    {
-      icon: CalendarCheck,
-      number: "3",
-      title: "Close on Your Schedule",
-      description: "Choose your closing date and walk away with cash—stress free.",
-    },
-  ];
-
   return (
-    <section id="how-it-works" className="py-24 bg-gradient-ocean">
-      <div className="container mx-auto px-6">
-        {/* Section Header */}
-        <div className="max-w-3xl mx-auto text-center mb-16">
-          <p className="text-accent font-medium tracking-wider uppercase text-sm mb-4">
-            How It Works
-          </p>
-          <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl font-bold text-foreground mb-6">
-            Our Simple 3-Step Process
-          </h2>
+    <section className="band" id="process">
+      <div className="wrap">
+        <div className="sec-head center reveal">
+          <span className="eyebrow center">How It Works</span>
+          <h2>A simple, three-step process</h2>
+          <p className="intro">Selling should not be complicated. We handle the details so you can move forward with confidence.</p>
         </div>
 
-        {/* Steps */}
-        <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-          {steps.map((step, index) => (
-            <div
-              key={step.title}
-              className="group bg-card rounded-2xl p-8 shadow-soft hover:shadow-elevated transition-all duration-500 border border-border/50 text-center relative"
-            >
-              {/* Step Number */}
-              <div className="w-16 h-16 rounded-full bg-primary flex items-center justify-center mx-auto mb-6 group-hover:scale-105 transition-transform duration-300">
-                <span className="text-2xl font-serif font-bold text-primary-foreground">{step.number}</span>
-              </div>
-
-              {/* Content */}
-              <h3 className="font-serif text-xl font-semibold text-foreground mb-3">
-                {step.title}
-              </h3>
-              <p className="text-muted-foreground leading-relaxed">
-                {step.description}
-              </p>
-
-              {/* Arrow connector (not on last) */}
-              {index < steps.length - 1 && (
-                <div className="hidden md:block absolute top-1/3 -right-4 z-10">
-                  <ArrowRight className="w-8 h-8 text-accent/40" />
-                </div>
-              )}
+        <div className="steps">
+          <div className="step reveal">
+            <div className="num">STEP 01</div>
+            <div className="ic">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                <path d="M14 2v6h6" />
+                <path d="M9 14h6M9 18h4" />
+              </svg>
             </div>
-          ))}
+            <h3>Tell us about your property</h3>
+            <p>Share a few details by form or phone. It takes a couple of minutes, and there is no obligation.</p>
+            <div className="rule" />
+          </div>
+
+          <div className="step reveal">
+            <div className="num">STEP 02</div>
+            <div className="ic">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M12 1v22" />
+                <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
+              </svg>
+            </div>
+            <h3>Receive a fair cash offer</h3>
+            <p>We review the details and present a transparent, all-cash offer with no hidden costs.</p>
+            <div className="rule" />
+          </div>
+
+          <div className="step reveal">
+            <div className="num">STEP 03</div>
+            <div className="ic">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+                <rect x="3" y="4" width="18" height="18" rx="2" />
+                <path d="M16 2v4M8 2v4M3 10h18" />
+                <path d="m9 16 2 2 4-4" />
+              </svg>
+            </div>
+            <h3>Close on your schedule</h3>
+            <p>Pick the closing date that works for you and walk away with cash - stress-free.</p>
+            <div className="rule" />
+          </div>
         </div>
 
-        {/* CTA */}
-        <div className="text-center mt-12">
-          <Button variant="gold" size="xl" asChild>
-            <a href="#contact">
-              Get Your Cash Offer
-              <ArrowRight className="w-5 h-5" />
-            </a>
-          </Button>
+        <div className="steps-cta reveal">
+          <a className="btn btn-primary" href="#contact">
+            Start With Your Property <span className="arr">&rarr;</span>
+          </a>
         </div>
       </div>
     </section>
