@@ -29,7 +29,7 @@ const Footer = () => {
           <div className="fcol">
             <h5>Get in touch</h5>
             <a href="tel:8084978919">(808) 497-8919</a>
-            <a href="mailto:info@legacyequitygroup.com">info@legacyequitygroup.com</a>
+            <a href="mailto:Leg.llc24@gmail.com">Leg.llc24@gmail.com</a>
             <span>All Hawaiian Islands</span>
           </div>
         </div>

@@ -1,0 +1,543 @@
+/* Styles for the ad landing page at /offer and the privacy page.
+   Phone first: most visitors arrive from inside the Facebook or Instagram app. */
+
+.offer {
+  min-height: 100vh;
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  background: var(--cream);
+  color: var(--ink);
+}
+
+.offer a:focus-visible,
+.offer button:focus-visible,
+.offer input:focus-visible,
+.offer select:focus-visible {
+  outline: 3px solid var(--leaf);
+  outline-offset: 2px;
+}
+
+/* ---- header ---- */
+.offer-head {
+  padding: 18px 20px;
+  background: var(--forest);
+  text-align: center;
+}
+
+.offer-brand {
+  font-family: var(--serif);
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  color: #fff;
+}
+
+/* ---- hero ---- */
+.offer-hero {
+  padding: 28px 20px 36px;
+  max-width: 620px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.offer-hero h1 {
+  font-family: var(--serif);
+  font-size: clamp(28px, 7.4vw, 40px);
+  line-height: 1.1;
+  color: var(--forest-deep);
+  text-wrap: balance;
+}
+
+.offer-sub {
+  margin-top: 12px;
+  font-size: 16px;
+  color: var(--muted);
+}
+
+.offer-cue {
+  margin-top: 18px;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--leaf);
+}
+
+/* ---- quiz card ---- */
+.quiz {
+  margin-top: 14px;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  box-shadow: var(--shadow);
+  padding: 20px;
+}
+
+.quiz-progress-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--muted);
+}
+
+.quiz-back {
+  background: none;
+  border: 0;
+  /* 44px minimum so it stays an easy thumb target on a phone */
+  min-height: 44px;
+  padding: 10px 8px;
+  margin-right: -8px;
+  font: inherit;
+  font-weight: 600;
+  color: var(--forest);
+  cursor: pointer;
+}
+
+.quiz-bar {
+  margin-top: 10px;
+  height: 6px;
+  border-radius: 999px;
+  background: var(--leaf-tint);
+  overflow: hidden;
+}
+
+.quiz-bar span {
+  display: block;
+  height: 100%;
+  background: var(--leaf);
+  border-radius: 999px;
+  transition: width 0.35s cubic-bezier(0.2, 0.7, 0.3, 1);
+}
+
+.quiz-q {
+  margin-top: 18px;
+  font-family: var(--serif);
+  font-size: 22px;
+  line-height: 1.2;
+  color: var(--forest-deep);
+}
+
+.quiz-q:focus {
+  outline: none;
+}
+
+/* ---- tap to answer ---- */
+.quiz-choices {
+  margin-top: 16px;
+  display: grid;
+  gap: 10px;
+}
+
+.quiz-choice {
+  min-height: 56px;
+  padding: 14px 18px;
+  text-align: left;
+  font: inherit;
+  font-weight: 500;
+  color: var(--ink);
+  background: var(--paper);
+  border: 1.5px solid var(--line);
+  border-radius: 4px;
+  cursor: pointer;
+  transition: border-color 0.18s, background 0.18s, transform 0.18s;
+}
+
+.quiz-choice:hover {
+  border-color: var(--leaf);
+  background: var(--leaf-tint);
+}
+
+.quiz-choice:active {
+  transform: scale(0.99);
+}
+
+.quiz-choice.is-picked {
+  border-color: var(--leaf);
+  background: var(--leaf-tint);
+  font-weight: 600;
+}
+
+/* ---- typed fields ---- */
+.quiz-field {
+  margin-top: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.quiz-field label {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--muted);
+}
+
+.quiz-field input,
+.quiz-field select {
+  min-height: 52px;
+  padding: 12px 14px;
+  font: inherit;
+  font-size: 16px; /* 16px stops iOS zooming on focus */
+  color: var(--ink);
+  background: var(--paper);
+  border: 1.5px solid var(--line);
+  border-radius: 4px;
+  width: 100%;
+}
+
+.quiz-field input:focus,
+.quiz-field select:focus {
+  border-color: var(--leaf);
+}
+
+.quiz-field input[aria-invalid="true"],
+.quiz-field select[aria-invalid="true"] {
+  border-color: #c0392b;
+}
+
+.quiz-row {
+  display: grid;
+  gap: 12px;
+  grid-template-columns: 1fr;
+}
+
+.quiz-error {
+  font-size: 13px;
+  font-weight: 500;
+  color: #c0392b;
+}
+
+.quiz-submit {
+  width: 100%;
+  margin-top: 20px;
+  min-height: 56px;
+  font-size: 16px;
+}
+
+.quiz-submit[disabled] {
+  opacity: 0.7;
+  cursor: progress;
+}
+
+.quiz-consent {
+  margin-top: 12px;
+  font-size: 12.5px;
+  line-height: 1.5;
+  color: var(--faint);
+  text-align: center;
+}
+
+.quiz-failed {
+  margin-top: 14px;
+  padding: 12px 14px;
+  border-radius: 4px;
+  background: #fdf0ee;
+  border: 1px solid #e8c4bd;
+  font-size: 14px;
+  color: #8e2a1c;
+}
+
+.quiz-failed a {
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+/* honeypot: off screen for people, still submitted for bots */
+.quiz-hp {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+/* ---- thank you ---- */
+.quiz-done {
+  text-align: center;
+  padding: 32px 20px;
+}
+
+.quiz-check {
+  width: 54px;
+  height: 54px;
+  margin: 0 auto 16px;
+  display: grid;
+  place-items: center;
+  font-size: 26px;
+  color: #fff;
+  background: var(--leaf);
+  border-radius: 50%;
+}
+
+.quiz-done h2 {
+  font-family: var(--serif);
+  font-size: 26px;
+  color: var(--forest-deep);
+}
+
+.quiz-done h2:focus {
+  outline: none;
+}
+
+.quiz-done p {
+  margin-top: 10px;
+  color: var(--muted);
+}
+
+.quiz-done a {
+  font-weight: 600;
+  color: var(--forest);
+  text-decoration: underline;
+}
+
+.quiz-note {
+  font-size: 14px;
+}
+
+/* ---- badges ---- */
+.offer-badges {
+  margin-top: 18px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px 10px;
+  list-style: none;
+}
+
+.offer-badges li {
+  font-size: 12.5px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: var(--forest);
+  background: var(--leaf-tint);
+  border-radius: 999px;
+  padding: 7px 14px;
+}
+
+/* ---- content bands ---- */
+.offer-band {
+  padding: 36px 20px;
+  max-width: 980px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.offer-band-tint {
+  background: var(--leaf-tint);
+  max-width: none;
+}
+
+.offer-band-tint > * {
+  max-width: 980px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.offer-h2 {
+  font-family: var(--serif);
+  font-size: 24px;
+  color: var(--forest-deep);
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.offer-cards {
+  display: grid;
+  gap: 14px;
+}
+
+.offer-card {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  padding: 20px;
+}
+
+.offer-card h2,
+.offer-card h3 {
+  font-family: var(--serif);
+  font-size: 19px;
+  color: var(--forest-deep);
+}
+
+.offer-card p {
+  margin-top: 8px;
+  font-size: 15px;
+  color: var(--muted);
+}
+
+.offer-steps {
+  display: grid;
+  gap: 16px;
+  list-style: none;
+  counter-reset: none;
+}
+
+.offer-steps li {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  padding: 20px;
+}
+
+.offer-step-num {
+  display: inline-grid;
+  place-items: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--forest);
+  color: #fff;
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.offer-steps h3 {
+  font-family: var(--serif);
+  font-size: 19px;
+  color: var(--forest-deep);
+}
+
+.offer-steps p {
+  margin-top: 8px;
+  font-size: 15px;
+  color: var(--muted);
+}
+
+/* ---- footer ---- */
+.offer-foot {
+  margin-top: auto;
+  padding: 26px 20px calc(26px + env(safe-area-inset-bottom, 0px));
+  background: var(--forest-deep);
+  color: rgba(255, 255, 255, 0.82);
+  text-align: center;
+  font-size: 14px;
+  display: grid;
+  gap: 8px;
+}
+
+.offer-foot-name {
+  font-family: var(--serif);
+  font-size: 17px;
+  color: #fff;
+}
+
+.offer-foot a,
+.quiz-done a {
+  /* padded so the phone numbers are comfortable to tap, without
+     breaking the line of text they sit in */
+  display: inline-block;
+  padding: 5px 2px;
+}
+
+.offer-foot a {
+  color: #fff;
+  text-decoration: underline;
+}
+
+/* ---- privacy page ---- */
+.offer-prose {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 32px 20px 56px;
+  width: 100%;
+}
+
+.offer-prose h1 {
+  font-family: var(--serif);
+  font-size: 30px;
+  color: var(--forest-deep);
+}
+
+.offer-prose h2 {
+  font-family: var(--serif);
+  font-size: 20px;
+  color: var(--forest-deep);
+  margin-top: 28px;
+}
+
+.offer-prose p {
+  margin-top: 10px;
+  color: var(--muted);
+}
+
+.offer-prose a {
+  color: var(--forest);
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+.offer-updated {
+  font-size: 14px;
+  color: var(--faint);
+}
+
+.offer-back {
+  margin-top: 36px;
+}
+
+/* ---- wider screens ---- */
+@media (min-width: 720px) {
+  .offer-head {
+    padding: 22px 24px;
+  }
+
+  .offer-hero {
+    padding: 44px 24px 48px;
+  }
+
+  .quiz {
+    padding: 28px;
+  }
+
+  .quiz-q {
+    font-size: 25px;
+  }
+
+  .quiz-row {
+    grid-template-columns: 2fr 1fr;
+  }
+
+  .quiz-submit {
+    width: auto;
+    min-width: 240px;
+  }
+
+  .offer-band {
+    padding: 56px 24px;
+  }
+
+  .offer-h2 {
+    font-size: 30px;
+    margin-bottom: 28px;
+  }
+
+  .offer-cards {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .offer-cards-4 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .offer-steps {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1024px) {
+  .offer-cards-4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .quiz-bar span,
+  .quiz-choice {
+    transition: none;
+  }
+}

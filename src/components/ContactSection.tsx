@@ -224,7 +224,7 @@ const ContactSection = () => {
               </div>
             </a>
 
-            <a className="cinfo" href="mailto:info@legacyequitygroup.com">
+            <a className="cinfo" href="mailto:Leg.llc24@gmail.com">
               <div className="ci">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.9" strokeLinecap="round" strokeLinejoin="round">
                   <rect x="2" y="4" width="20" height="16" rx="2" />
@@ -233,8 +233,7 @@ const ContactSection = () => {
               </div>
               <div className="ct">
                 <b>Email us</b>
-                <span>info@legacyequitygroup.com</span>
-                <span className="sm">LEG.LLC24@gmail.com</span>
+                <span>Leg.llc24@gmail.com</span>
               </div>
             </a>
 
