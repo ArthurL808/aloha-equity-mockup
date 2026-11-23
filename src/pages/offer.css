@@ -20,6 +20,12 @@
 
 /* ---- header ---- */
 .offer-head {
+  /* index.css sets a global `header { position: fixed; z-index: 80 }` for the
+     main site's floating nav. This bar scrolls with the page, so opt back out,
+     otherwise it sits on top of the headline. */
+  position: static;
+  z-index: auto;
+  border-bottom: 0;
   padding: 18px 20px;
   background: var(--forest);
   text-align: center;
