@@ -108,17 +108,19 @@ export function propertyTypeLabel(value: string): string {
   return PROPERTY_TYPES.find((t) => t.value === value)?.label ?? "";
 }
 
-export type Utm = { source: string; medium: string; campaign: string };
+export type Utm = { source: string; medium: string; campaign: string; content: string };
 
-export const EMPTY_UTM: Utm = { source: "", medium: "", campaign: "" };
+export const EMPTY_UTM: Utm = { source: "", medium: "", campaign: "", content: "" };
 
-/** Read the three utm values off the page address. Called once on load. */
+/** Read the utm values off the page address. Called once on load.
+ *  content is the ad creative, so two creatives in one campaign stay apart. */
 export function readUtm(search: string): Utm {
   const params = new URLSearchParams(search);
   return {
     source: params.get("utm_source") ?? "",
     medium: params.get("utm_medium") ?? "",
     campaign: params.get("utm_campaign") ?? "",
+    content: params.get("utm_content") ?? "",
   };
 }
 

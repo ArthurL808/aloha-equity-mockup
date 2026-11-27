@@ -166,6 +166,7 @@ export default async function handler(req: LeadRequest, res: LeadResponse) {
     source: clean(u.source),
     medium: clean(u.medium),
     campaign: clean(u.campaign),
+    content: clean(u.content),
   };
 
   const { total, label } = scoreLead(answers);
@@ -181,6 +182,7 @@ export default async function handler(req: LeadRequest, res: LeadResponse) {
     `utm_source: ${utm.source || "none"}`,
     `utm_medium: ${utm.medium || "none"}`,
     `utm_campaign: ${utm.campaign || "none"}`,
+    `utm_content: ${utm.content || "none"}`,
   ];
 
   // ---- 1. Follow Up Boss -------------------------------------------------
