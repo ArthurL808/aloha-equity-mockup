@@ -24,6 +24,7 @@ const Footer = () => {
             <a href="#why">Why Us</a>
             <a href="#situations">Who We Help</a>
             <a href="#contact">Contact</a>
+            <a href="/privacy">Privacy Policy</a>
           </div>
 
           <div className="fcol">

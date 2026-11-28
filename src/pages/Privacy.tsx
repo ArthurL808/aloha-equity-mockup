@@ -30,6 +30,20 @@ const Privacy = () => {
           we ask for it.
         </p>
 
+        <h2>Cookies and advertising tools</h2>
+        <p>
+          This site uses the Meta Pixel, an advertising tool from Meta, the company behind Facebook
+          and Instagram. It runs on every page and uses cookies and similar technology to record that
+          you visited, which pages you opened and whether you submitted a form. We use it to measure
+          how our ads perform and to show ads to people who have already visited this site. It does
+          not read anything else on your device.
+        </p>
+        <p>
+          You can limit this. If you have a Facebook or Instagram account, the ad preferences section
+          of your Meta account settings controls how your activity is used for advertising. Your
+          browser settings let you block or delete cookies, and a private window will not keep them.
+        </p>
+
         <h2>We do not sell your information</h2>
         <p>
           We do not sell or rent your information. We share it only with the service providers that help
