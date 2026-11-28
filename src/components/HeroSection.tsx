@@ -16,7 +16,7 @@ const HeroSection = () => {
           <p className="sub">A fair, all-cash offer for your Hawai'i home - no fees, no repairs, no pressure.</p>
           <p className="lead">We buy properties across the islands as-is and close on the timeline that works for you.</p>
           <div className="hero-actions">
-            <a className="btn btn-leaf" href="#contact">
+            <a className="btn btn-leaf" href="/offer?utm_source=site&utm_medium=button">
               Get Your Cash Offer <span className="arr">&rarr;</span>
             </a>
             <a className="btn btn-ghost" href="#process">

@@ -47,7 +47,7 @@ const Header = () => {
               </svg>
               (808) 497-8919
             </a>
-            <a className="btn btn-leaf" href="#contact">
+            <a className="btn btn-leaf" href="/offer?utm_source=site&utm_medium=button">
               Get Your Cash Offer
             </a>
           </div>
@@ -79,7 +79,7 @@ const Header = () => {
         </nav>
 
         <div className="dfoot">
-          <a className="btn btn-leaf" href="#contact" onClick={() => setIsMenuOpen(false)}>
+          <a className="btn btn-leaf" href="/offer?utm_source=site&utm_medium=button" onClick={() => setIsMenuOpen(false)}>
             Get Your Cash Offer
           </a>
           <a className="btn btn-ghost" href="tel:8084978919" onClick={() => setIsMenuOpen(false)}>
